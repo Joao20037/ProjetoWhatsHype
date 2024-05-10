@@ -9,7 +9,7 @@ API_KEY = 'AIzaSyB4qoflIBJ_8xLCF-g6Bbp3COizMOpzY38'  # ou TOKEN_OAUTH2, dependen
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
 # Função para pesquisar vídeos por categoria e termo no título
-def search_videos_by_category_and_term(category_id, search_term, max_results=1000):
+def search_videos_by_category_and_term(category_id, search_term, max_results=100):
     # Lista de vídeos encontrados
     videos_found = []
 
@@ -41,9 +41,15 @@ def search_videos_by_category_and_term(category_id, search_term, max_results=100
             title = item['snippet']['title']
             channel_title = item['snippet']['channelTitle']
             published_at = item['snippet']['publishedAt']
-            language = item['snippet']['defaultLanguage'] if 'defaultLanguage' in item['snippet'] else 'N/A'
+            description = item['snippet']['description']  # 1. Adicionando descrição
+            tags = item['snippet'].get('tags', [])  # 1. Adicionando tags
+            channel_id = item['snippet']['channelId']  # 1. Adicionando ID do canal
             view_count = get_video_view_count(video_id)  # Adiciona a contagem de visualizações
-            videos_found.append([video_id, title, channel_title, published_at, language, view_count])
+            like_count, dislike_count, comment_count = get_video_stats(video_id)  # 2. Adicionando estatísticas
+            region_restriction = item['snippet'].get('regionRestriction', {})  # 3. Adicionando restrições regionais
+            relevant_topics = item.get('relevantTopicIds', [])  # 6. Adicionando tópicos relevantes
+            live_streaming_details = item.get('liveStreamingDetails', {})  # 7. Adicionando detalhes de transmissão ao vivo
+            videos_found.append([video_id, title, channel_title, published_at, description, tags, channel_id, view_count, like_count, dislike_count, comment_count, region_restriction, relevant_topics, live_streaming_details])
             total_results += 1
 
             # Verificar se atingiu o limite máximo de resultados
@@ -67,11 +73,26 @@ def get_video_view_count(video_id):
         return int(response['items'][0]['statistics']['viewCount'])
     return 0
 
+# Função para obter estatísticas de vídeo (curtidas, descurtidas, comentários)
+def get_video_stats(video_id):
+    request = youtube.videos().list(
+        part='statistics',
+        id=video_id
+    )
+    response = request.execute()
+    if 'items' in response and response['items']:
+        item = response['items'][0]['statistics']
+        like_count = int(item.get('likeCount', 0))
+        dislike_count = int(item.get('dislikeCount', 0))
+        comment_count = int(item.get('commentCount', 0))
+        return like_count, dislike_count, comment_count
+    return 0, 0, 0
+
 # Função para salvar os dados em um arquivo CSV
 def save_to_csv(data, filename):
     with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['Video ID', 'Title', 'Channel Title', 'Published At', 'Language', 'View Count'])
+        writer.writerow(['Video ID', 'Title', 'Channel Title', 'Published At', 'Description', 'Tags', 'Channel ID', 'View Count', 'Like Count', 'Dislike Count', 'Comment Count', 'Region Restriction', 'Relevant Topics', 'Live Streaming Details'])
         writer.writerows(data)
 
 # ID da categoria desejada (você pode obter isso através da API)
