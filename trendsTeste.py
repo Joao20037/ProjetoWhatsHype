@@ -1,5 +1,6 @@
 from serpapi import GoogleSearch
 import pandas as pd
+
 params = {
   "engine": "google_trends",
   "q": "madonnna",
