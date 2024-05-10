@@ -7,7 +7,8 @@ Github - https://github.com/Joao20037/ProjetoWhatsHype
 
 
   - Para clonar o repositorio, com o git clone (url)
-  - Baixar o github Desktop, se for usuário do windows 
+  - Usuário de Windows, baixe o GitBash (https://git-scm.com/docs/git-clone/pt_BR)
+  - Após instalar, abra uma janela do GitBash, navegue até o diretório que desejar e insira *git clone https://github.com/Joao20037/ProjetoWhatsHype* para clonar o o projeto no diretório
 
 Python 
 
