@@ -8,3 +8,37 @@ Site para python enviorement - https://python.land/virtual-environments/virtuale
 LINK PARA VER DEPOIS SOBRE A API DO YOUTUBE
 
 https://developers.google.com/youtube/reporting/v1/code_samples/python?hl=pt-br
+
+
+IDs Categorias Youtube API
+ID: 1, Nome: Film & Animation
+ID: 2, Nome: Autos & Vehicles
+ID: 10, Nome: Music
+ID: 15, Nome: Pets & Animals
+ID: 17, Nome: Sports
+ID: 18, Nome: Short Movies
+ID: 19, Nome: Travel & Events
+ID: 20, Nome: Gaming
+ID: 21, Nome: Videoblogging
+ID: 22, Nome: People & Blogs
+ID: 23, Nome: Comedy
+ID: 24, Nome: Entertainment
+ID: 25, Nome: News & Politics
+ID: 26, Nome: Howto & Style
+ID: 27, Nome: Education
+ID: 28, Nome: Science & Technology
+ID: 30, Nome: Movies
+ID: 31, Nome: Anime/Animation
+ID: 32, Nome: Action/Adventure
+ID: 33, Nome: Classics
+ID: 34, Nome: Comedy
+ID: 35, Nome: Documentary
+ID: 36, Nome: Drama
+ID: 37, Nome: Family
+ID: 38, Nome: Foreign
+ID: 39, Nome: Horror
+ID: 40, Nome: Sci-Fi/Fantasy
+ID: 41, Nome: Thriller
+ID: 42, Nome: Shorts
+ID: 43, Nome: Shows
+ID: 44, Nome: Trailers
