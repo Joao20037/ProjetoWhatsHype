@@ -1,6 +1,11 @@
 from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
+<<<<<<< HEAD:youtubePesquisaID.py
 import pandas as pd
+=======
+import csv
+import panda as pd
+>>>>>>> 82cf9b4397e503e67d5fbc51b445db9718f8c820:youtubeRootTeste.py
 
 # Configurar suas credenciais
 API_KEY = 'AIzaSyB4qoflIBJ_8xLCF-g6Bbp3COizMOpzY38'  # ou TOKEN_OAUTH2, dependendo da autenticação que você está usando
@@ -59,8 +64,8 @@ def pesquisa(id_categoria, termo, max_results=100):
         if resultado_total < max_results:
             request = youtube.search().list_next(request, response)
 
-    return videos_found
-
+    return pd.Dataframe(videos_found)
+    
 # Função para obter a contagem de visualizações de um vídeo
 def get_contador_de_view(video_id):
     request = youtube.videos().list(
@@ -87,6 +92,7 @@ def get_video_stats(video_id):
         return like_count, dislike_count, comment_count
     return 0, 0, 0
 
+<<<<<<< HEAD:youtubePesquisaID.py
 # Função para salvar os dados em um arquivo CSV
 def save_to_csv(data, filename):
     # Tentar carregar o arquivo CSV se já existir, caso contrário, criar um novo DataFrame
@@ -136,3 +142,15 @@ def save_to_csv(data, filename):
 
 # # Salvar os resultados em um arquivo CSV
 # save_to_csv(resultados_pesquisa, 'videos_gameplay.csv')
+=======
+# ID da categoria desejada (você pode obter isso através da API)
+category_id = '10'  # Exemplo: Entretenimento
+search_term = 'Música'  # Termo de pesquisa desejado
+
+# Pesquisar vídeos
+search_results = search_videos_by_category_and_term(category_id, search_term)
+search_results.to_csv(‘videos_found.csv’, mode=’a’, index=False, header=False)
+
+# Salvar os resultados em um arquivo CSV
+save_to_csv(search_results, 'videos_found.csv')
+>>>>>>> 82cf9b4397e503e67d5fbc51b445db9718f8c820:youtubeRootTeste.py
