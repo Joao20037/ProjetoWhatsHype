@@ -7,10 +7,10 @@ def save_to_csv(data, filename):
     try:
         df = pd.read_csv(filename)
     except FileNotFoundError:
-        df = pd.DataFrame(columns=['Video ID', 'Channel Title', 'Title', 'Published At', 'Tags', 'Thumbnails', 'Category ID', 'Duration', 'View Count', 'Like Count', 'Dislike Count', 'Comment Count'])
+        df = pd.DataFrame(columns=['Data da Pesquisa','Video ID', 'Channel Title', 'Title', 'Published At', 'Tags', 'Thumbnails', 'Category ID', 'Duration', 'View Count', 'Like Count', 'Dislike Count', 'Comment Count'])
 
     # Adicionar novos dados ao DataFrame
-    new_df = pd.DataFrame(data, columns=['Video ID', 'Channel Title', 'Title', 'Published At', 'Tags', 'Thumbnails', 'Category ID', 'Duration', 'View Count', 'Like Count', 'Dislike Count', 'Comment Count'])
+    new_df = pd.DataFrame(data, columns=['Data da Pesquisa','Video ID', 'Channel Title', 'Title', 'Published At', 'Tags', 'Thumbnails', 'Category ID', 'Duration', 'View Count', 'Like Count', 'Dislike Count', 'Comment Count'])
     df = pd.concat([df, new_df], ignore_index=True)
 
     # Salvar o DataFrame atualizado no arquivo CSV
@@ -54,7 +54,8 @@ def search_videos(max_results=50):
             like_count = video_statistics.get('likeCount', 0)
             dislike_count = video_statistics.get('dislikeCount', 0)
             comment_count = video_statistics.get('commentCount', 0)
-            data.append([video_id, channel_title, title, published_at, tags, thumbnails, category_id, duration, view_count, like_count, dislike_count, comment_count])
+            data_pesquisa = pd.Timestamp.now().strftime('%d/%m/%Y')
+            data.append([data_pesquisa,video_id, channel_title, title, published_at, tags, thumbnails, category_id, duration, view_count, like_count, dislike_count, comment_count])
 
         # Salvar os resultados em um arquivo CSV
         save_to_csv(data, 'videos_populares.csv')

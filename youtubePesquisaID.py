@@ -2,7 +2,6 @@ from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
 import pandas as pd
 
-
 # Configurar suas credenciais
 API_KEY = 'AIzaSyB4qoflIBJ_8xLCF-g6Bbp3COizMOpzY38'  # ou TOKEN_OAUTH2, dependendo da autenticação que você está usando
 
@@ -49,7 +48,8 @@ def pesquisa(id_categoria, termo, max_results=100):
             region_restriction = item['snippet'].get('regionRestriction', {})  # 3. Adicionando restrições regionais
             relevant_topics = item.get('relevantTopicIds', [])  # 6. Adicionando tópicos relevantes
             live_streaming_details = item.get('liveStreamingDetails', {})  # 7. Adicionando detalhes de transmissão ao vivo
-            videos_found.append([video_id, title, channel_title, published_at, description, tags, channel_id, view_count, like_count, dislike_count, comment_count, region_restriction, relevant_topics, live_streaming_details])
+            data_pesquisa = pd.Timestamp.now().strftime('%d/%m/%Y') #8. adicionando data da pesquisa
+            videos_found.append([data_pesquisa,video_id, title, channel_title, published_at, description, tags, channel_id, view_count, like_count, dislike_count, comment_count, region_restriction, relevant_topics, live_streaming_details])
             resultado_total += 1
 
             # Verificar se atingiu o limite máximo de resultados
@@ -60,8 +60,8 @@ def pesquisa(id_categoria, termo, max_results=100):
         if resultado_total < max_results:
             request = youtube.search().list_next(request, response)
 
-    return pd.Dataframe(videos_found)
-    
+    return videos_found
+
 # Função para obter a contagem de visualizações de um vídeo
 def get_contador_de_view(video_id):
     request = youtube.videos().list(
@@ -94,10 +94,10 @@ def save_to_csv(data, filename):
     try:
         df = pd.read_csv(filename, encoding='utf-8')
     except FileNotFoundError:
-        df = pd.DataFrame(columns=['Video ID', 'Title', 'Channel Title', 'Published At', 'Description', 'Tags', 'Channel ID', 'View Count', 'Like Count', 'Dislike Count', 'Comment Count', 'Region Restriction', 'Relevant Topics', 'Live Streaming Details'])
+        df = pd.DataFrame(columns=['Data da Pesquisa','Video ID', 'Title', 'Channel Title', 'Published At', 'Description', 'Tags', 'Channel ID', 'View Count', 'Like Count', 'Dislike Count', 'Comment Count', 'Region Restriction', 'Relevant Topics', 'Live Streaming Details'])
 
     # Adicionar novos dados ao DataFrame
-    novos_dados = pd.DataFrame(data, columns=['Video ID', 'Title', 'Channel Title', 'Published At', 'Description', 'Tags', 'Channel ID', 'View Count', 'Like Count', 'Dislike Count', 'Comment Count', 'Region Restriction', 'Relevant Topics', 'Live Streaming Details'])
+    novos_dados = pd.DataFrame(data, columns=['Data da Pesquisa','Video ID', 'Title', 'Channel Title', 'Published At', 'Description', 'Tags', 'Channel ID', 'View Count', 'Like Count', 'Dislike Count', 'Comment Count', 'Region Restriction', 'Relevant Topics', 'Live Streaming Details'])
     df = pd.concat([df, novos_dados], ignore_index=True)
 
     # Salvar o DataFrame de volta ao arquivo CSV
@@ -106,7 +106,7 @@ def save_to_csv(data, filename):
 
 #POR ENQUANTO AS CHAMADAS DE FUNÇÕES PARA EXECUTAR AS PESQUISAS ESTÃO COMENTADAS POR MOTIVOS DE:
 # PRECISO MODULARIZAR PARA PODER ESCOLHER ENTRE 2 OU + TERMOS DE PESQUISA
-#   PRECISO IMPLEMENTAR A COLUNA DATA DE PESQUISA COM A DATA DD/MM/AAAA
+#   FEITO - PRECISO IMPLEMENTAR A COLUNA DATA DE PESQUISA COM A DATA DD/MM/AAAA
 #       PRECISO ESCOLHER MAIS IDS E TERMOS DE PESQUISA DENTRO DOS IDS JÁ USADOS
 
 
@@ -114,7 +114,7 @@ def save_to_csv(data, filename):
 #CASO PRECISE EXECUTAR A PESQUISA, DESCOMENTAR, EXECUTAR E RECOMENTAR
 
 
-#PESQUISA ID 10 - "Música"
+# #PESQUISA ID 10 - "Música"
 
 # # ID da categoria desejada (consulte o arquivo anotacoes.txt)
 # id_categoria = '10'
@@ -133,7 +133,7 @@ def save_to_csv(data, filename):
 # termo = 'Gameplay'
 
 # # Pesquisar vídeos
-# resultados_pesquisa = search_videos_by_category_and_term(id_categoria, termo)
+# resultados_pesquisa = pesquisa(id_categoria, termo)
 
 # # Salvar os resultados em um arquivo CSV
 # save_to_csv(resultados_pesquisa, 'videos_gameplay.csv')
