@@ -70,7 +70,9 @@ def get_contador_de_view(video_id):
     )
     response = request.execute()
     if 'items' in response and response['items']:
-        return int(response['items'][0]['statistics']['viewCount'])
+        item = response['items'][0]
+        if 'statistics' in item and 'viewCount' in item['statistics']:
+            return int(item['statistics']['viewCount'])
     return 0
 
 # Função para obter estatísticas de vídeo (curtidas, descurtidas, comentários)
@@ -107,14 +109,12 @@ def save_to_csv(data, filename):
 #POR ENQUANTO AS CHAMADAS DE FUNÇÕES PARA EXECUTAR AS PESQUISAS ESTÃO COMENTADAS POR MOTIVOS DE:
 # PRECISO MODULARIZAR PARA PODER ESCOLHER ENTRE 2 OU + TERMOS DE PESQUISA
 #   FEITO - PRECISO IMPLEMENTAR A COLUNA DATA DE PESQUISA COM A DATA DD/MM/AAAA
-#       PRECISO ESCOLHER MAIS IDS E TERMOS DE PESQUISA DENTRO DOS IDS JÁ USADOS
-
-
+#       PRECISO ESCOLHER MAIS IDS E TERMOS DE PESQUISA DENTRO DOS IDS JÁ USADO
 
 #CASO PRECISE EXECUTAR A PESQUISA, DESCOMENTAR, EXECUTAR E RECOMENTAR
 
 
-# #PESQUISA ID 10 - "Música"
+#PESQUISA ID 10 - "Música"
 
 # # ID da categoria desejada (consulte o arquivo anotacoes.txt)
 # id_categoria = '10'
@@ -137,3 +137,39 @@ def save_to_csv(data, filename):
 
 # # Salvar os resultados em um arquivo CSV
 # save_to_csv(resultados_pesquisa, 'videos_gameplay.csv')
+
+# # PESQUISA ID 30 - "Filmes"
+
+# # ID da categoria desejada (você pode obter isso através da API)
+# id_categoria = '30'
+# termo = 'Filmes'
+
+# # Pesquisar vídeos
+# resultados_pesquisa = pesquisa(id_categoria, termo)
+
+# # Salvar os resultados em um arquivo CSV
+# save_to_csv(resultados_pesquisa, 'videos_filmes.csv')
+
+# # PESQUISA ID 17 - "Esportes"
+
+# # ID da categoria desejada (você pode obter isso através da API)
+# id_categoria = '17'
+# termo = 'Esportes'
+
+# # Pesquisar vídeos
+# resultados_pesquisa = pesquisa(id_categoria, termo)
+
+# # Salvar os resultados em um arquivo CSV
+# save_to_csv(resultados_pesquisa, 'videos_esportes.csv')
+
+# # PESQUISA ID 22 - "Pessoas e Blogs"
+
+# # ID da categoria desejada (você pode obter isso através da API)
+# id_categoria = '22'
+# termo = 'Famosos'
+
+# # Pesquisar vídeos
+# resultados_pesquisa = pesquisa(id_categoria, termo)
+
+# # Salvar os resultados em um arquivo CSV
+# save_to_csv(resultados_pesquisa, 'videos_famosos.csv')
