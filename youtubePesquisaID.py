@@ -114,62 +114,62 @@ def save_to_csv(data, filename):
 #CASO PRECISE EXECUTAR A PESQUISA, DESCOMENTAR, EXECUTAR E RECOMENTAR
 
 
-#PESQUISA ID 10 - "Música"
+# PESQUISA ID 10 - "Música"
 
-# # ID da categoria desejada (consulte o arquivo anotacoes.txt)
-# id_categoria = '10'
-# termo = 'Música'
+# ID da categoria desejada (consulte o arquivo anotacoes.txt)
+id_categoria = '10'
+termo = 'Música'
 
-# # Pesquisar vídeos
-# resultados_pesquisa = pesquisa(id_categoria, termo)
+# Pesquisar vídeos
+resultados_pesquisa = pesquisa(id_categoria, termo)
 
-# # Salvar os resultados em um arquivo CSV
-# save_to_csv(resultados_pesquisa, 'videos_musica.csv')
+# Salvar os resultados em um arquivo CSV
+save_to_csv(resultados_pesquisa, 'videos_musica.csv')
 
-# # PESQUISA ID 20 - "Gaming"
+# PESQUISA ID 20 - "Gaming"
 
-# # ID da categoria desejada (você pode obter isso através da API)
-# id_categoria = '20'
-# termo = 'Gameplay'
+# ID da categoria desejada (você pode obter isso através da API)
+id_categoria = '20'
+termo = 'Gameplay'
 
-# # Pesquisar vídeos
-# resultados_pesquisa = pesquisa(id_categoria, termo)
+# Pesquisar vídeos
+resultados_pesquisa = pesquisa(id_categoria, termo)
 
-# # Salvar os resultados em um arquivo CSV
-# save_to_csv(resultados_pesquisa, 'videos_gameplay.csv')
+# Salvar os resultados em um arquivo CSV
+save_to_csv(resultados_pesquisa, 'videos_gameplay.csv')
 
-# # PESQUISA ID 30 - "Filmes"
+# PESQUISA ID 30 - "Filmes"
 
-# # ID da categoria desejada (você pode obter isso através da API)
-# id_categoria = '30'
-# termo = 'Filmes'
+# ID da categoria desejada (você pode obter isso através da API)
+id_categoria = '30'
+termo = 'Filmes'
 
-# # Pesquisar vídeos
-# resultados_pesquisa = pesquisa(id_categoria, termo)
+# Pesquisar vídeos
+resultados_pesquisa = pesquisa(id_categoria, termo)
 
-# # Salvar os resultados em um arquivo CSV
-# save_to_csv(resultados_pesquisa, 'videos_filmes.csv')
+# Salvar os resultados em um arquivo CSV
+save_to_csv(resultados_pesquisa, 'videos_filmes.csv')
 
-# # PESQUISA ID 17 - "Esportes"
+# PESQUISA ID 17 - "Esportes"
 
-# # ID da categoria desejada (você pode obter isso através da API)
-# id_categoria = '17'
-# termo = 'Esportes'
+# ID da categoria desejada (você pode obter isso através da API)
+id_categoria = '17'
+termo = 'Esportes'
 
-# # Pesquisar vídeos
-# resultados_pesquisa = pesquisa(id_categoria, termo)
+# Pesquisar vídeos
+resultados_pesquisa = pesquisa(id_categoria, termo)
 
-# # Salvar os resultados em um arquivo CSV
-# save_to_csv(resultados_pesquisa, 'videos_esportes.csv')
+# Salvar os resultados em um arquivo CSV
+save_to_csv(resultados_pesquisa, 'videos_esportes.csv')
 
-# # PESQUISA ID 22 - "Pessoas e Blogs"
+# PESQUISA ID 22 - "Pessoas e Blogs"
 
-# # ID da categoria desejada (você pode obter isso através da API)
-# id_categoria = '22'
-# termo = 'Famosos'
+# ID da categoria desejada (você pode obter isso através da API)
+id_categoria = '22'
+termo = 'Famosos'
 
-# # Pesquisar vídeos
-# resultados_pesquisa = pesquisa(id_categoria, termo)
+# Pesquisar vídeos
+resultados_pesquisa = pesquisa(id_categoria, termo)
 
-# # Salvar os resultados em um arquivo CSV
-# save_to_csv(resultados_pesquisa, 'videos_famosos.csv')
+# Salvar os resultados em um arquivo CSV
+save_to_csv(resultados_pesquisa, 'videos_famosos.csv')
