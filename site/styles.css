@@ -1,0 +1,89 @@
+/* Reset de estilos */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', sans-serif; /* Usando fonte do Google Fonts */
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header,
+.footer {
+    padding: 20px 0;
+}
+
+.header .logo {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0; /* Evitando espaço extra abaixo do título */
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav li:first-child {
+    margin-left: 0;
+}
+
+.nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav li a.active {
+    color: #ffffff;
+}
+
+.nav li a:hover {
+    color: #0000004f;
+}
+
+.jumbotron {
+    background-color: rgba(255, 255, 255, 0.9); /* Adicionando um fundo semitransparente */
+    padding: 40px;
+    border-radius: 15px; /* Arredondando as bordas */
+    margin-bottom: 40px; /* Adicionando espaço extra abaixo do jumbotron */
+}
+
+.jumbotron h2 {
+    font-size: 42px; /* Aumentando o tamanho da fonte do título */
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #000000, #570c01); /* Gradiente de cores para o botão */
+    border-color: #007bff; /* Alterando a cor da borda do botão */
+    color: #fff; /* Cor do texto */
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #000000, #570c01, #007bff); /* Gradiente de cores para o botão no hover */
+    border-color: #000000; /* Alterando a cor da borda do botão no hover */
+}
+
+.gradient-background {
+    background: linear-gradient(135deg, #007bff, #000000, #570c01); /* Adicionando gradiente de cores ao fundo */
+    color: #fff; /* Alterando a cor do texto para branco */
+}
