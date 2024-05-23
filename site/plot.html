@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsHype - Filtragem de Dados</title>
+    <title>WhatsHype - Plot</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -17,23 +17,24 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Página Inicial</a></li>
                     <li class="nav-item"><a class="nav-link" href="temas.html">Áreas de Interesse</a></li>
                     <li class="nav-item"><a class="nav-link" href="filtro.html">Filtragem</a></li>
-                    <li class="nav-item"><a class="nav-link" href="plot.html">Plot</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="plot.html">Plot</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="container mt-5 pt-5">
-        <h2 class="text-center mb-4">Filtragem de Dados</h2>
-        <p class="lead text-center mb-4">Nessa sessão você pode aplicar diversos filtros ao data frame selecionado.</p>
-        <div class="d-flex flex-column align-items-center">
-            <a href="#" class="btn btn-primary btn-lg mt-4">Filtrar por Recorrência</a>
-            <a href="#" class="btn btn-primary btn-lg mt-4">Filtrar por Data de Publicação</a>
-            <a href="#" class="btn btn-primary btn-lg mt-4">Filtrar por Data de Pesquisa</a>
-            <a href="#" class="btn btn-primary btn-lg mt-4">Filtrar por Canal</a>
-            <a href="#" class="btn btn-primary btn-lg mt-4">Filtrar por Mais Vistos</a>
-            <a href="#" class="btn btn-primary btn-lg mt-4">Filtrar por Mais Engajados</a>
+    <main class="container mt-5">
+        <div id="dashboard" class="mt-5 pt-5">
+            <h2 class="text-center">Análise de Dados</h2>
+            <select id="filtro-categoria" class="form-control mb-4">
+                <option value="todas">Todas</option>
+                <option value="musica">Música</option>
+                <option value="esportes">Esportes</option>
+                <option value="famosos">Famosos</option>
+                <option value="filmes">Filmes</option>
+            </select>
+            <div id="grafico"></div>
         </div>
-    </section>
+    </main>
     <footer class="gradient-background text-white text-center py-4 mt-4">
         <div class="container">
             <p>&copy; 2024 WhatsHype. Todos os direitos reservados.</p>
@@ -44,5 +45,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

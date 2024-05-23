@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsHype - Página Inicial</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> <!-- Importando fonte do Google Fonts -->
-    <link rel="stylesheet" href="styles.css"> <!-- Adicionando arquivo CSS personalizado -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="gradient-background text-white py-4">
-        <div class="container">
+    <header class="gradient-background text-white py-4 fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
             <h1 class="logo">WhatsHype</h1>
             <nav>
                 <ul class="nav">
                     <li class="nav-item"><a class="nav-link active" href="index.html">Página Inicial</a></li>
-                    <li class="nav-item"><a class="nav-link" href="filtro.html">Filtrar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="movies.html">Plotar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="temas.html">Áreas de Interesse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="filtro.html">Filtragem</a></li>
+                    <li class="nav-item"><a class="nav-link" href="plot.html">Plot</a></li>
                 </ul>
             </nav>
         </div>
@@ -25,12 +26,41 @@
         <div class="container">
             <h2 class="display-4">Descubra o que está em hype agora!</h2>
             <p class="lead">Explore tendências em música, filmes, esportes e muito mais.</p>
-            <a href="filtro.html" class="btn btn-primary btn-lg mt-4">Explorar os Dados</a>
+            <a href="temas.html" class="btn btn-primary btn-lg mt-4">Explorar os Dados</a>
         </div>
     </section>
-    <footer class="gradient-background text-white text-center py-4">
+    <section class="container mt-5 section-separator">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <img src="img/musica.png" alt="Música" class="img-fluid mb-3">
+                <a href="#" class="btn btn-primary btn-lg">Música</a>
+                <p class="mt-3">Veja o que está bombando no mundo da música.</p>
+            </div>
+            <div class="col-md-3">
+                <img src="img/esportes.png" alt="Esportes" class="img-fluid mb-3">
+                <a href="#" class="btn btn-primary btn-lg">Esportes</a>
+                <p class="mt-3">As últimas novidades e destaques do esporte.</p>
+            </div>
+            <div class="col-md-3">
+                <img src="img/famosos.png" alt="Famosos" class="img-fluid mb-3">
+                <a href="#" class="btn btn-primary btn-lg">Famosos</a>
+                <p class="mt-3">Descubra o que os famosos estão fazendo.</p>
+            </div>
+            <div class="col-md-3">
+                <img src="img/filmes.png" alt="Filmes" class="img-fluid mb-3">
+                <a href="#" class="btn btn-primary btn-lg">Filmes</a>
+                <p class="mt-3">As tendências e lançamentos mais recentes do cinema.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="gradient-background text-white text-center py-4 mt-4">
         <div class="container">
             <p>&copy; 2024 WhatsHype. Todos os direitos reservados.</p>
+            <p>Contato: <a href="mailto:contato@whatshype.com" class="text-white">contato@whatshype.com</a></p>
+            <div class="social-icons">
+                <a href="#"><img src="img/facebook-icon.png" alt="Facebook" class="img-fluid social-icon"></a>
+                <a href="#"><img src="img/instagram-icon.png" alt="Instagram" class="img-fluid social-icon"></a>
+            </div>
         </div>
     </footer>
 </body>

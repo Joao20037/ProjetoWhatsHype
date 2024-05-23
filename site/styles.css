@@ -7,16 +7,21 @@
 
 /* Estilos gerais */
 body {
-    font-family: 'Poppins', sans-serif; /* Usando fonte do Google Fonts */
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background-color: #f8f9fa;
     color: #333;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+.container h2 {
+    margin-top: 50px; /* Adiciona margem superior para afastar o título do header */
 }
 
 .header,
@@ -28,7 +33,7 @@ body {
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 0; /* Evitando espaço extra abaixo do título */
+    margin-bottom: 0;
 }
 
 .nav {
@@ -58,32 +63,61 @@ body {
 }
 
 .nav li a:hover {
-    color: #0000004f;
+    background: linear-gradient(135deg, #000000, #0f0f38);
+    color: #fff;
 }
 
 .jumbotron {
-    background-color: rgba(255, 255, 255, 0.9); /* Adicionando um fundo semitransparente */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 40px;
-    border-radius: 15px; /* Arredondando as bordas */
-    margin-bottom: 40px; /* Adicionando espaço extra abaixo do jumbotron */
+    border-radius: 15px;
+    margin-bottom: 40px;
+    margin-top: 80px;
 }
 
 .jumbotron h2 {
-    font-size: 42px; /* Aumentando o tamanho da fonte do título */
+    font-size: 42px;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #007bff, #000000, #570c01); /* Gradiente de cores para o botão */
-    border-color: #007bff; /* Alterando a cor da borda do botão */
-    color: #fff; /* Cor do texto */
+    background: linear-gradient(135deg, #007bff, #000000, #570c01);
+    border-color: #007bff;
+    color: #fff;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #000000, #570c01, #007bff); /* Gradiente de cores para o botão no hover */
-    border-color: #000000; /* Alterando a cor da borda do botão no hover */
+    background: linear-gradient(135deg, #000000, #570c01, #007bff);
+    border-color: #000000;
 }
 
 .gradient-background {
-    background: linear-gradient(135deg, #007bff, #000000, #570c01); /* Adicionando gradiente de cores ao fundo */
-    color: #fff; /* Alterando a cor do texto para branco */
+    background: linear-gradient(135deg, #007bff, #000000, #570c01);
+    color: #fff;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Define a altura do painel para ocupar 100% da viewport height */
+}
+
+#filtro-categoria {
+    width: 300px;
+    margin-bottom: 20px;
 }
