@@ -16,12 +16,12 @@ body {
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 15px auto;
     padding: 0 20px;
 }
 
 .container h2 {
-    margin-top: 50px; /* Adiciona margem superior para afastar o título do header */
+    margin-top: 50px;
 }
 
 .header,
@@ -71,8 +71,6 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 40px;
     border-radius: 15px;
-    margin-bottom: 40px;
-    margin-top: 80px;
 }
 
 .jumbotron h2 {
@@ -80,18 +78,18 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #007bff, #000000, #570c01);
+    background: linear-gradient(135deg, #007bff, #000000, #b11c05);
     border-color: #007bff;
     color: #fff;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #000000, #570c01, #007bff);
+    background: linear-gradient(135deg, #000000, #b11c05, #007bff);
     border-color: #000000;
 }
 
 .gradient-background {
-    background: linear-gradient(135deg, #007bff, #000000, #570c01);
+    background: linear-gradient(135deg, #007bff, #000000, #b11c05);
     color: #fff;
 }
 
@@ -120,4 +118,14 @@ body {
 #filtro-categoria {
     width: 300px;
     margin-bottom: 20px;
+}
+
+
+.logo   {
+    padding-right: 160px;
+}
+
+.logoicon{
+    height: 110px;
+    border-radius: 15px;
 }

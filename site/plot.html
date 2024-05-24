@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="gradient-background text-white py-4 fixed-top">
+    <header class="gradient-background text-white py-4">
         <div class="container d-flex justify-content-between align-items-center">
+            <img src="img/logo.png" alt="logo" class="logoicon">
             <h1 class="logo">WhatsHype</h1>
             <nav>
                 <ul class="nav">
@@ -22,17 +23,9 @@
             </nav>
         </div>
     </header>
-    <main class="container mt-5">
-        <div id="dashboard" class="mt-5 pt-5">
-            <h2 class="text-center">Análise de Dados</h2>
-            <select id="filtro-categoria" class="form-control mb-4">
-                <option value="todas">Todas</option>
-                <option value="musica">Música</option>
-                <option value="esportes">Esportes</option>
-                <option value="famosos">Famosos</option>
-                <option value="filmes">Filmes</option>
-            </select>
-            <div id="grafico"></div>
+    <main class="jumbotron text-center">
+        <div id="dashboard" class="mt-5 pt-1">
+            <div id="dash-container" style="width: 100%; height: 100%;"></div>
         </div>
     </main>
     <footer class="gradient-background text-white text-center py-4 mt-4">
@@ -47,5 +40,6 @@
     </footer>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="scripts.js"></script>
+    <script src="dash_integration.js"></script>
 </body>
 </html>
