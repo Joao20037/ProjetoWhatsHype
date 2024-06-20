@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsHype - Página Inicial</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link rel="shortcut icon" type="imagex/png" href="img/logo.png">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
-<body>
-
+<body> 
     <header class="gradient-background text-white py-4">
         <div class="container d-flex justify-content-between align-items-center">
             <img src="img/logo.png" alt="logo" class="logoicon">
@@ -29,19 +27,19 @@
     </header>
 
     <section class="jumbotron text-center">
-        <div class="container">
+        <div class="text-box">
             <h2 class="display-4">Descubra o que está em hype agora!</h2>
             <p class="lead">Explore tendências em música, filmes, esportes e muito mais.</p>
-            <a href="temas.html" class="btn btn-primary btn-lg mt-4">Explorar os Dados</a>
         </div>
+        <a href="temas.html" class="btn btn-primary btn-lg mt-4">Explorar os Dados</a>
     </section>
 
     <section class="container mt-5 section-separator">
         <div class="row text-center">
             <div class="col-md-3">
-                <img src="img/musica.png" alt="Música" class="img-fluid mb-3">
-                <a href="#" class="btn btn-primary btn-lg">Música</a>
-                <p class="mt-3">Veja o que está bombando no mundo da música.</p>
+                <img src="img/musica.png" alt="Música" class="img-fluid">
+                <a href="#" class="btn btn-music btn-lg">Música</a>
+                <p class="mt-1">Veja o que está bombando no mundo da música.</p>
             </div>
             <div class="col-md-3">
                 <img src="img/esportes.png" alt="Esportes" class="img-fluid mb-3">
@@ -60,16 +58,41 @@
             </div>
         </div>
     </section>
+
+    <section id="features">
+        <div class="headline">O que fazemos</div>
+        <div id="features-container">
+            <div class="feature">
+                <i class="fas fa-solid fa-database fa-3x"></i>
+                <span class="title">Coleta de Dados</span>
+                <p>Os dados são coletados diretamente das APIs. Cada uma delas fornece dados específicos relacionados a vídeos, tendências de pesquisa e interações em subreddits.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-code fa-3x"></i>
+                <span class="title">Análise Estatística</span>
+                <p>São calculadas estatísticas descritivas para entender a distribuição dos dados e identificar padrões. Isso inclui o cálculo de médias e a identificação de outliers.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-solid fa-chart-line fa-3x"></i>
+                <span class="title">Modelagem dos Dados</span>
+                <p>Os dados coletados são organizados em modelos específicos para cada categoria, contendo métricas detalhadas, facilitando a análise e identificação de tendências.</p>
+            </div>
+        </div>
+    </section>
     
     <footer class="gradient-background text-white text-center py-4 mt-4">
         <div class="container">
             <p>&copy; 2024 WhatsHype. Todos os direitos reservados.</p>
             <p>Contato: <a href="mailto:contato@whatshype.com" class="text-white">contato@whatshype.com</a></p>
             <div class="social-icons">
-                <a href="#"><img src="img/facebook-icon.png" alt="Facebook" class="img-fluid social-icon"></a>
-                <a href="#"><img src="img/instagram-icon.png" alt="Instagram" class="img-fluid social-icon"></a>
+                <a href="#"><img src="img/facebook-icon.png" alt="Facebook" class="socials"></a>
+                <a href="#"><img src="img/instagram-icon.png" alt="Instagram" class="socials"></a>
             </div>
         </div>
     </footer>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f9e19193d6.js" crossorigin="anonymous"></script>
+
 </body>
 </html>
