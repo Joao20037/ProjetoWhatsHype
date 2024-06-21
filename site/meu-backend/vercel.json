@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.py",
+      "use": "@now/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "server.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "server.py"
+    }
+  ]
+}
