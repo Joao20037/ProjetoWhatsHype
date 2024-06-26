@@ -1,19 +1,13 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "server.py",
-      "use": "@now/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "server.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "server.py"
-    }
-  ]
-}
+    "version": 2,
+    "builds": [
+      {
+        "src": "meu-backend/app/index.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      { "handle": "filesystem", "src": "/data/(.*)" },
+      { "src": "/(.*)", "dest": "meu-backend/app/index.py" }
+    ]
+  }

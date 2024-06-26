@@ -14,7 +14,7 @@ Python
   - entrar no repositório e abrir o terminal na mesma pasta, pode ser no do próprio vs code.
   - O TERMINAL PRECISA ESTAR DENTRO DA PASTA DO REPOSITÓRIO.
   - Se for Windows, abra o PowerShell como adm e insira Set-ExecutionPolicy RemoteSigned #Aceitar Politicas de Execução de Scripts
-  - 
+  - ERRO CRLF (git config --global core.autocrlf false)
   - No terminal, rodar comandos
     - .\venv\Scripts\activate # ativa o python virtual environment 
     - pip install -r requirements.txt # vai instalar todos os modulos e depêndencias do repositório
