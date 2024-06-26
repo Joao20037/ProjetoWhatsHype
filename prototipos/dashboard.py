@@ -17,11 +17,11 @@ def load_data(filepath):
 
 # List of CSV file options
 csv_files = {
-    'Em Alta': "C:\\Users\\T-GAMER\\Desktop\\ProjetoWhatsHype\\videos_populares.csv",
-    'Música': "C:\\Users\\T-GAMER\\Desktop\\ProjetoWhatsHype\\videos_musica.csv",
-    'Esportes': "C:\\Users\\T-GAMER\\Desktop\\ProjetoWhatsHype\\videos_esportes.csv",
-    'Famosos': "C:\\Users\\T-GAMER\\Desktop\\ProjetoWhatsHype\\videos_famosos.csv",
-    'Filmes': "C:\\Users\\T-GAMER\\Desktop\\ProjetoWhatsHype\\videos_filmes.csv"
+    'Em Alta': "/home/joaolucas/Documentos/SPAD03/ProjetoWhatsHype/videos_populares.csv",
+    'Música': "/home/joaolucas/Documentos/SPAD03/ProjetoWhatsHype/videos_musica.csv",
+    'Esportes': "/home/joaolucas/Documentos/SPAD03/ProjetoWhatsHype/videos_esportes.csv",
+    'Famosos': "/home/joaolucas/Documentos/SPAD03/ProjetoWhatsHype/videos_famosos.csv",
+    'Filmes': "/home/joaolucas/Documentos/SPAD03/ProjetoWhatsHype/videos_filmes.csv"
 }
 
 # Function to calculate the evolution of metrics
