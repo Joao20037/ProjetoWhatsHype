@@ -35,7 +35,7 @@ csv_files = {
     'Filmes': "/home/joaolucas/Documentos/SPAD03/ProjetoWhatsHype/videos_filmes.csv"
 }
 
-reddit_file = "../csvs/EmAltaReddit.csv"
+reddit_file = "/home/joaolucas/Documentos/SPAD03/ProjetoWhatsHype/csvs/EmAltaReddit.csv"
 
 # Function to calculate the evolution of metrics
 def calculate_evolution(df, metric):
