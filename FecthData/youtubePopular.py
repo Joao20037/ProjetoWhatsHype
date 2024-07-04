@@ -17,7 +17,7 @@ def save_to_csv(data, filename):
     df.to_csv(filename, index=False)
 
 # Defina sua chave de API do YouTube
-API_KEY = 'AIzaSyB4qoflIBJ_8xLCF-g6Bbp3COizMOpzY38'
+API_KEY = ''
 
 # Crie um serviço da API do YouTube
 youtube = build('youtube', 'v3', developerKey=API_KEY)
