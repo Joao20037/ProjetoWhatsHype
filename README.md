@@ -12,3 +12,10 @@ Tecnologias usadas:
   <img src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" />
   <img src="https://img.shields.io/badge/tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau" />
 </p>
+
+Desenvolvedores:
+
+  - Iago Martins
+  - João Lucas
+  - Gustavo Totti
+  - Gabriel Amaral
