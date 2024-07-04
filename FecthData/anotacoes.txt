@@ -1,10 +1,1 @@
-Site para python enviorement - https://python.land/virtual-environments/virtualenv
 
-
-  CHAVE PARA GOOGLE TRENDS "api_key": "4d73f4242018e9905d140bd94243ec92fc7c84b6ace1965607357bff0748a011"
-  Docs - https://serpapi.com/google-trends-api
-  Esse docs tem varias apis sobre coisas do google
-
-LINK PARA VER DEPOIS SOBRE A API DO YOUTUBE
-
-https://developers.google.com/youtube/reporting/v1/code_samples/python?hl=pt-br
