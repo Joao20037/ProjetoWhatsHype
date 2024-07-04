@@ -17,16 +17,51 @@
             <nav>
                 <ul class="nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Página Inicial</a></li>
-                    <li class="nav-item"><a class="nav-link" href="temas.html">Áreas de Interesse</a></li>
                     <li class="nav-item"><a class="nav-link" href="filtro.html">Filtragem</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="plot.html">Plot</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main class="jumbotron text-center">
+
+    <main class="jumbotron1 text-center no-margin-padding">
         <div id="dashboard" class="mt-5 pt-1">
-            <div id="dash-container" style="width: 100%; height: 100%;"></div>
+    
+            <!-- Código do Tableau -->
+            <div class='tableauPlaceholder' id='viz1720061048848' style='position: relative'>
+                <noscript><a href='#'><img alt='Reddit ' src='https://public.tableau.com/static/images/BW/BWNG96P8B/1_rss.png' style='border: none' /></a></noscript>
+                <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='path' value='shared/BWNG96P8B' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https://public.tableau.com/static/images/BW/BWNG96P8B/1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='pt-BR' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1720061048848');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                if ( divElement.offsetWidth > 800 ) {
+                    vizElement.style.width='50%';
+                    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                } else if ( divElement.offsetWidth > 500 ) {
+                    vizElement.style.width='50%';
+                    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                } else {
+                    vizElement.style.width='100%';
+                    vizElement.style.height='900px';
+                }
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
         </div>
     </main>
 
@@ -34,7 +69,7 @@
         <div class="container">
             <p>&copy; 2024 WhatsHype. Todos os direitos reservados.</p>
             <p>Contato: <a href="mailto:contato@whatshype.com" class="text-white">contato@whatshype.com</a></p>
-            <div class="social-icons">
+            <div class="social-icones social-center">
                 <a href="#"><img src="img/facebook-icon.png" alt="Facebook" class="socials"></a>
                 <a href="#"><img src="img/instagram-icon.png" alt="Instagram" class="socials"></a>
             </div>
