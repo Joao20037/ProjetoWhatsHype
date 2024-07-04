@@ -3,7 +3,7 @@ from google.oauth2.credentials import Credentials
 import pandas as pd
 
 # Configurar suas credenciais
-API_KEY = 'AIzaSyB4qoflIBJ_8xLCF-g6Bbp3COizMOpzY38'  # ou TOKEN_OAUTH2, dependendo da autenticação que você está usando
+API_KEY = ''  # ou TOKEN_OAUTH2, dependendo da autenticação que você está usando
 
 # Construir o serviço da API do YouTube
 youtube = build('youtube', 'v3', developerKey=API_KEY)
