@@ -1,6 +1,6 @@
 import subprocess
 
-caminho = r'C:\Users\T-GAMER\Desktop\ProjetoWhatsHype/FecthData'
+caminho = r''
 
 try:
     # executar o script youtubePesquisaID.py
